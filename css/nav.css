@@ -2,6 +2,12 @@
     display: flex;
     justify-content: center;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
+    position: fixed;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: white;
 }
 
 .top_nav_container {
@@ -41,7 +47,7 @@
 }
 
 .main_nav_Element {
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .main_nav_aside {
@@ -54,6 +60,11 @@
     text-align: center;
     line-height: 50px;
     gap: 20px;
+    align-items: center;
+}
+
+.main_nav_aside ul li:last-child {
+    opacity: 0.1;
 }
 
 .main_nav_service {
@@ -72,4 +83,12 @@
     border: 1px solid rgba(0, 0, 0, .1);
     border-radius: 30px;
     opacity: 0.5;
+}
+
+.glass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 17px;
 }

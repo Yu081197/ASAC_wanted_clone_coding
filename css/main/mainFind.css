@@ -1,0 +1,59 @@
+.main_find {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_find_container {
+    display: flex;
+    width: 1060px;
+    height: 200px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 45px;
+    gap: 20px;
+}
+
+.main_find_title {
+    height: 50px;
+    line-height: 50px;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.main_find_card_container {
+    display: grid;
+    grid-template-columns: 265px 265px 265px 265px;
+    width: 1060px;
+    height: 100px;
+    justify-content: space-around;
+    grid-gap: 1px;
+}
+
+.main_find_card_container > .main_find_card {
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 3px;
+}
+
+.main_find_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 265px;
+    border-collapse: collapse;
+}
+
+.main_find_card_emo {
+    height: 50px;
+}
+
+.main_find_card_detail {
+    font-weight: 600;
+}
+
+.find_glass {
+    width: 30px;
+    height: 30px;
+}
