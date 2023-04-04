@@ -1,0 +1,14 @@
+/* .main_event_detail_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    overflow: hidden;
+    width: 520px;
+    height: 270px;
+} */
+
+.main_event_detail_card_img {
+    width: 520px;
+    height: 270px;
+}

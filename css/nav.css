@@ -6,7 +6,7 @@
 
 .top_nav_container {
     display: flex;
-    width: 1000px;
+    width: 1060px;
     height: 50px;
     justify-content: space-between;
 }
@@ -15,9 +15,20 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     line-height: 50px;
     text-align: center;
+}
+
+.main_logo_nav {
+    width: 15px;
+    height: 15px;
+}
+
+.main_logo_img {
+    width: 72px;
+    height: 16px;
 }
 
 .main_nav {
@@ -25,7 +36,16 @@
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
+    width: 500px;
     gap: 20px
+}
+
+.main_nav_Element {
+    font-size: 13px;
+}
+
+.main_nav_aside {
+    font-size: 14px;
 }
 
 .main_nav_aside ul {
@@ -33,7 +53,7 @@
     flex-direction: row;
     text-align: center;
     line-height: 50px;
-    gap: 10px;
+    gap: 20px;
 }
 
 .main_nav_service {
@@ -41,4 +61,15 @@
     flex-direction: row;
     text-align: center;
     line-height: 50px;
+}
+
+.main_nav_service_element {
+    width: 80px;
+    font-size: 13px;
+    text-align: center;
+    line-height: 30px;
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 30px;
+    opacity: 0.5;
 }

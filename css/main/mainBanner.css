@@ -36,8 +36,6 @@ main {
     gap: 20px;
 }
 
-
-
 .main_banner_element_float_title {
     display: flex;
     width: 290px;
@@ -61,5 +59,4 @@ main {
 .main_banner_element_float_button {
     display: flex;
     margin-left: 20px;
-
 }
