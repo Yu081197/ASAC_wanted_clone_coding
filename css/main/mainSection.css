@@ -17,8 +17,10 @@
     font-size: 20px;
     font-weight: 700;
     height: 50px;
-    text-align: center;
-    line-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .main_section_nav {
@@ -27,17 +29,44 @@
     height: 38px;
     gap: 10px;
     margin: 20px 0 40px 0;
+    width: 1060px;
 }
 
 .main_section_nav ul {
     display: flex;
-    gap: 5px;
     width: 1060px;
     justify-content: space-around;
 }
 
 .main_section_nav_button {
-    line-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 50%;
+}
+
+.main_section_nav_button svg {
+    opacity: 0.5;
+    width: 18px;
+    height: 18px;
+}
+
+.main_section_nav_dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.main_section_nav_dot svg {
+    opacity: 0.5;
+    width: 18px;
+    height: 18px;
 }
 
 .main_section_nav_element {
@@ -120,6 +149,13 @@
     border: 1px solid rgba(0, 0, 0, .1);
     border-radius: 50px;
     margin-top: 30px;
+}
+
+.main_section_detail_button div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .main_section_aside {

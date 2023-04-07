@@ -14,8 +14,8 @@
     justify-content: center;
     margin: 45px;
     padding-bottom: 40px;
-
     border-bottom: 1px solid rgba(0, 0, 0, .1);
+    overflow: hidden;
 }
 
 .main_event_title {
@@ -28,7 +28,13 @@
 }
 
 .main_event_title_button {
-    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 50%;
 }
 
 .main_event_title_detail {
@@ -46,11 +52,12 @@
 }
 
 .main_event_title_detail_button {
-    text-align: center;
-    line-height: 30px;
     height: 30px;
     opacity: 0.5;
     font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main_event_detail {
@@ -59,10 +66,18 @@
     gap: 20px;
 }
 
+.main_event_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 .main_event_detail_card {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    overflow: hidden;
 }
 
 .main_event_detail_card_container {
