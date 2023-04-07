@@ -61,6 +61,13 @@
     line-height: 50px;
     gap: 20px;
     align-items: center;
+    justify-content: center;
+}
+
+.main_nav_aside ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main_nav_aside ul li:last-child {

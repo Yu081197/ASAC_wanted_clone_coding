@@ -1,4 +1,86 @@
 .main_select {
-    top: 60px;
+    display: flex;
+    gap: 25px;
     position: relative;
+    top: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    width: 1665px;
+}
+
+.main_select_container {
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+    width: 1060px;
+    padding: 20px;
+    gap: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    justify-content: center;
+}
+
+.main_select_title_container {
+    display: flex;
+    height: 30px;
+    line-height: 30px;
+    gap: 20px;
+
+}
+
+.main_select_title {
+    width: 100px;
+    font-size: 24px;
+    font-weight: 700;
+    border-right: 2px solid rgba(0, 0, 0, .1);
+}
+
+.main_select_subtitle {
+    width: 150px;
+    font-size: 22px;
+}
+
+.main_select_box_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+}
+
+.main_select_box {
+    display: flex;
+    gap: 20px;
+
+}
+
+.main_select_box_element, .main_select_box_element_last {
+    width: 100px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_select_button_container {
+    display: flex;
+    height: 30px;
+    width: 1060px;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 0 30px 0;
+}
+
+.main_select_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    background-color: #F2FBF4;
+    width: 120px;
+    height: 30px;
+    border-radius: 30px;
 }

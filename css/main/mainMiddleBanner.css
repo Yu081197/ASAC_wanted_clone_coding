@@ -13,6 +13,8 @@
     width: 1060px;
     height: 110px;
     border-radius: 10px;
+    background-image: url(/img/main_banner/middle_banner.jpg);
+    background-size: cover;
     background-color: #0D99FF;
     gap:10px;
     padding-left: 120px;
