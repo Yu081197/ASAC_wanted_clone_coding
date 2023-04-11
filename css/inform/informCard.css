@@ -1,39 +1,39 @@
-.main_card {
+.inform_card {
     display: flex;
     flex-direction: column;
     width: 1060px;
     gap: 100px;
 }
 
-.main_card_company {
+.inform_card_company {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.main_card_company_bookmark {
+.inform_card_company_bookmark {
     color: blue;
     font-weight: 600;
 }
 
-.main_card_company_title {
+.inform_card_company_title {
     font-size: 23px;
     font-weight: 600;
 }
 
-.main_card_company_div {
+.inform_card_company_div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 20px;
 }
 
-.main_card_detail {
+.inform_card_detail {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
 }
 
-.main_card_company_container {
+.inform_card_company_container {
     width: 200px;
     height: 270px;
     border: 1px solid rgba(0, 0, 0, .1);
@@ -41,12 +41,12 @@
     position: relative;
 }
 
-.main_card_company_img {
+.inform_card_company_img {
     width: 200px;
     height: 135px;
 }
 
-.main_card_company_detail {
+.inform_card_company_detail {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,18 +56,18 @@
     gap: 10px;
 }
 
-.main_card_company_detale_title {
+.inform_card_company_detale_title {
     font-size: 16px;
     font-weight: 600;
 
 }
 
-.main_card_company_detale_sub {
+.inform_card_company_detale_sub {
     opacity: 0.5;
     font-size: 14px;
 }
 
-.main_card_company_float {
+.inform_card_company_float {
     float: left;
     width: 50px;
     height: 50px;
@@ -79,34 +79,34 @@
     left: 15px;
 }
 
-.main_card_detail_container {
+.inform_card_detail_container {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.main_card_detail_img {
+.inform_card_detail_img {
     width: 250px;
     height: 190px;
 }
 
-.main_card_detail_des {
+.inform_card_detail_des {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.main_card_deta_des_title {
+.inform_card_deta_des_title {
     font-size: 17px;
     font-weight: 600;
 }
 
-.main_card_deta_des_company {
+.inform_card_deta_des_company {
     font-size: 14px;
     font-weight: 600;
 }
 
-.main_card_deta_des_res {
+.inform_card_deta_des_res {
     font-size: 12px;
     width: 90px;
     border: 1px solid #FF9100;
@@ -117,11 +117,11 @@
     border-radius: 3px;
 }
 
-.main_card_deta_des_place {
+.inform_card_deta_des_place {
     font-size: 14px;
     opacity: 0.5;
 }
 
-.main_card_deta_des_reward {
+.inform_card_deta_des_reward {
     font-size: 15px;
 }

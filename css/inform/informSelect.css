@@ -1,4 +1,4 @@
-.main_select {
+.inform_select {
     display: flex;
     gap: 25px;
     position: relative;
@@ -10,7 +10,7 @@
     width: 1665px;
 }
 
-.main_select_container {
+.inform_select_container {
     display: flex;
     flex-direction: column;
     height: 130px;
@@ -21,7 +21,7 @@
     justify-content: center;
 }
 
-.main_select_title_container {
+.inform_select_title_container {
     display: flex;
     height: 30px;
     line-height: 30px;
@@ -29,19 +29,19 @@
 
 }
 
-.main_select_title {
+.inform_select_title {
     width: 100px;
     font-size: 24px;
     font-weight: 700;
     border-right: 2px solid rgba(0, 0, 0, .1);
 }
 
-.main_select_subtitle {
+.inform_select_subtitle {
     width: 150px;
     font-size: 22px;
 }
 
-.main_select_box_container {
+.inform_select_box_container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -49,13 +49,13 @@
     align-items: center;
 }
 
-.main_select_box {
+.inform_select_box {
     display: flex;
     gap: 20px;
 
 }
 
-.main_select_box_element, .main_select_box_element_last {
+.inform_select_box_element, .inform_select_box_element_last {
     width: 100px;
     height: 40px;
     border: 1px solid rgba(0, 0, 0, .1);
@@ -65,7 +65,7 @@
     align-items: center;
 }
 
-.main_select_button_container {
+.inform_select_button_container {
     display: flex;
     height: 30px;
     width: 1060px;
@@ -74,7 +74,7 @@
     margin: 0 0 30px 0;
 }
 
-.main_select_button {
+.inform_select_button {
     display: flex;
     align-items: center;
     justify-content: center;
