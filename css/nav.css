@@ -37,12 +37,18 @@
     height: 16px;
 }
 
+.top_nav_main_container {
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .main_nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
-    width: 500px;
+    width: 550px;
     gap: 20px
 }
 
@@ -51,7 +57,10 @@
 }
 
 .main_nav_aside {
+    display: flex;
     font-size: 14px;
+    width: 270px;
+    justify-content: space-between;
 }
 
 .main_nav_aside ul {
@@ -70,7 +79,7 @@
     justify-content: center;
 }
 
-.main_nav_aside ul li:last-child {
+.main_nav_aside_element_emoji {
     opacity: 0.1;
 }
 
