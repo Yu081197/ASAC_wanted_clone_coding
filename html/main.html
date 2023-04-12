@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>원티드 클론 코딩</title>
     <script></script>
-    <link rel="stylesheet" href="/css/nav.css">
-    <link rel="stylesheet" href="/css/main/main.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/main/mainBanner.css">
-    <link rel="stylesheet" href="/css/main/mainSection.css">
-    <link rel="stylesheet" href="/css/main/mainMiddleBanner.css">
-    <link rel="stylesheet" href="/css/main/mainEvent.css">
-    <link rel="stylesheet" href="/css/main/mainFind.css">
-    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/main/main.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/spinner.css">
+    <link rel="stylesheet" href="../css/main/mainBanner.css">
+    <link rel="stylesheet" href="../css/main/mainSection.css">
+    <link rel="stylesheet" href="../css/main/mainMiddleBanner.css">
+    <link rel="stylesheet" href="../css/main/mainEvent.css">
+    <link rel="stylesheet" href="../css/main/mainFind.css">
+    <link rel="stylesheet" href="../css/reset.css">
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
@@ -22,485 +23,489 @@
     
 </head>
 <body>
-    <nav class="top_nav">
-        <div class="top_nav_container">
-            <div class="main_logo">
-                <img src="/img/nav_tab.jpg" class="main_logo_nav">
-                <img src="/img/main_logo.jpg" class="main_logo_img">
+    <div id="spinner_container" class="spinner_container">
+        <div id="spinner" class="spinner"></div>
+    </div>
+    <div id="container">
+        <nav class="top_nav">
+            <div class="top_nav_container">
+                <div class="main_logo">
+                    <img src="../img/nav_tab.jpg" class="main_logo_nav">
+                    <img src="../img/main_logo.jpg" class="main_logo_img">
+                </div>
+                <div class="top_nav_main_container">
+                    <ul class="main_nav">
+                        <li class="main_nav_Element"><a href="#">채용</a></li>
+                        <li class="main_nav_Element"><a href="#">이벤트</a></li>
+                        <li class="main_nav_Element"><a href="#">직군별 연봉</a></li>
+                        <li class="main_nav_Element"><a href="#">이력서</a></li>
+                        <li class="main_nav_Element"><a href="#">커뮤니티 <!-- NEW --></a></li> 
+                        <li class="main_nav_Element"><a href="#">프리랜서</a></li>
+                        <li class="main_nav_Element"><a href="#">AI 합격예측 <!-- Beta --></a></li>
+                    </ul>
+                    <aside class="main_nav_aside">
+                        <ul>
+                            <li>
+                                <img class="main_nav_aside_element glass" src="../img/glass.jpg"></img>
+                            </li>
+                            <li class="main_nav_aside_element login">회원가입/로그인</li>
+                        </ul>
+                        <ul>
+                            <li class="main_nav_aside_element_emoji">|</li>
+                        </ul>
+                        <div class="main_nav_service_element">기업 서비스</div>
+                    </aside>
+                </div>
             </div>
-            <div class="top_nav_main_container">
-                <ul class="main_nav">
-                    <li class="main_nav_Element"><a href="#">채용</a></li>
-                    <li class="main_nav_Element"><a href="#">이벤트</a></li>
-                    <li class="main_nav_Element"><a href="#">직군별 연봉</a></li>
-                    <li class="main_nav_Element"><a href="#">이력서</a></li>
-                    <li class="main_nav_Element"><a href="#">커뮤니티 <!-- NEW --></a></li> 
-                    <li class="main_nav_Element"><a href="#">프리랜서</a></li>
-                    <li class="main_nav_Element"><a href="#">AI 합격예측 <!-- Beta --></a></li>
-                </ul>
-                <aside class="main_nav_aside">
-                    <ul>
-                        <li>
-                            <img class="main_nav_aside_element glass" src="/img/glass.jpg"></img>
-                        </li>
-                        <li class="main_nav_aside_element login">회원가입/로그인</li>
-                    </ul>
-                    <ul>
-                        <li class="main_nav_aside_element_emoji">|</li>
-                    </ul>
-                    <div class="main_nav_service_element">기업 서비스</div>
+        </nav>
+        <main>
+            <div class="main_banner">
+                <div class="main_banner_btn main_banner_prev" onclick="">
+                    <svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18"><path d="m6.045 9 5.978-5.977a.563.563 0 1 0-.796-.796L4.852 8.602a.562.562 0 0 0 0 .796l6.375 6.375a.563.563 0 0 0 .796-.796L6.045 9z"></path></svg>
+                </div>
+                <div class="main_banner_btn main_banner_next" onclick="">
+                    <svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18"><path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path></svg>
+                </div>
+                <div class="main_banner_container slide_list">
+                    <div id="first_item" class="main_banner_element slide_item">
+                        <img class="main_banner_element_img" src="../img/main_banner/main_banner_1.jpg">
+                        <div class="main_banner_element_float">
+                            <div class="main_banner_element_float_title">
+                                <div>프리온보딩 프론트엔드 인턴십 (4월)</div>
+                                <div>기업이 진짜 원하는 프론트엔드 주니어</div>
+                            </div>
+                            <div class="main_banner_element_float_button">
+                                <div>바로가기 ></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_banner_element slide_item">
+                        <img class="main_banner_element_img" src="../img/main_banner/main_banner_2.jpg">
+                        <div class="main_banner_element_float">
+                            <div class="main_banner_element_float_title">
+                                <div>프리온보딩 프론트엔드 인턴십 (4월)</div>
+                                <div>기업이 진짜 원하는 프론트엔드 주니어</div>
+                            </div>
+                            <div class="main_banner_element_float_button">
+                                <div>바로가기 ></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_banner_element slide_item">
+                        <img class="main_banner_element_img" src="../img/main_banner/main_banner_3.jpg">
+                        <div class="main_banner_element_float">
+                            <div class="main_banner_element_float_title">
+                                <div>프리온보딩 프론트엔드 인턴십 (4월)</div>
+                                <div>기업이 진짜 원하는 프론트엔드 주니어</div>
+                            </div>
+                            <div class="main_banner_element_float_button">
+                                <div>바로가기 ></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_banner_element slide_item">
+                        <img class="main_banner_element_img" src="../img/main_banner/main_banner_4.jpg">
+                        <div class="main_banner_element_float">
+                            <div class="main_banner_element_float_title">
+                                <div>프리온보딩 프론트엔드 인턴십 (4월)</div>
+                                <div>기업이 진짜 원하는 프론트엔드 주니어</div>
+                            </div>
+                            <div class="main_banner_element_float_button">
+                                <div>바로가기 ></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_banner_element slide_item">
+                        <img class="main_banner_element_img" src="../img/main_banner/main_banner_5.jpg">
+                        <div class="main_banner_element_float">
+                            <div class="main_banner_element_float_title">
+                                <div>프리온보딩 프론트엔드 인턴십 (4월)</div>
+                                <div>기업이 진짜 원하는 프론트엔드 주니어</div>
+                            </div>
+                            <div class="main_banner_element_float_button">
+                                <div>바로가기 ></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div  id="first_item" class="main_banner_element slide_item">
+                        <img class="main_banner_element_img" src="../img/main_banner/main_banner_6.jpg">
+                        <div class="main_banner_element_float">
+                            <div class="main_banner_element_float_title">
+                                <div>프리온보딩 프론트엔드 인턴십 (4월)</div>
+                                <div>기업이 진짜 원하는 프론트엔드 주니어</div>
+                            </div>
+                            <div class="main_banner_element_float_button">
+                                <div>바로가기 ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="main_section">
+                <div class="main_section_container">
+                    <div class="main_section_title">나에게 필요한 커리어 인사이트<svg width="24" height="24" viewBox="0 0 17 17"><defs><filter id="bfoh3u0w3a"><feColorMatrix in="SourceGraphic" values="0 0 0 0 0.600000 0 0 0 0 0.600000 0 0 0 0 0.600000 0 0 0 1.000000 0"></feColorMatrix></filter></defs><g fill="none" fill-rule="evenodd"><g><g><g transform="translate(-1080 -374) translate(1080 374)"><g><path stroke="#999" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M9.421 13.334c-.736.277-1.535.43-2.368.43-3.706 0-6.71-3.005-6.71-6.711 0-3.707 3.004-6.71 6.71-6.71 1.853 0 3.53.75 4.745 1.965 1.214 1.214 1.965 2.892 1.965 4.745 0 1.853-.75 3.53-1.965 4.745" transform="translate(1 1)"></path><path fill="#999" d="M6.382 10.408c0-.371.3-.671.67-.671.371 0 .672.3.672.67 0 .372-.3.672-.671.672-.37 0-.671-.3-.671-.671" transform="translate(1 1) rotate(-180 7.053 10.408)"></path><path stroke="#999" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M5.04 5.655c0-1.08.901-1.958 2.013-1.958 1.11 0 2.013.877 2.013 1.958 0 1.08-1.007 1.957-2.013 1.957v.783" transform="translate(1 1)"></path></g></g></g></g></g></svg></div>
+                    <div class="main_section_nav">
+                        <ul>
+                            <li class="main_section_nav_element">취업/이직</li>
+                            <li class="main_section_nav_element">IT/기술</li>
+                            <li class="main_section_nav_element">UX/UI</li>
+                            <li class="main_section_nav_element">개발</li>
+                            <li class="main_section_nav_element">인간관계</li>
+                            <li class="main_section_nav_element">MD</li>
+                            <li class="main_section_nav_element">디자인</li>
+                            <li class="main_section_nav_element">콘텐츠 제작</li>
+                            <li class="main_section_nav_element">리더십</li>
+                            <li class="main_section_nav_element">노무</li>
+                            <li class="main_section_nav_element">데이터</li>
+                            <!-- <li class="main_section_nav_element">HR</li>
+                            <li class="main_section_nav_element">경영/전략</li>
+                            <li class="main_section_nav_element">마케팅</li>
+                            <li class="main_section_nav_element">커리어고민</li>
+                            <li class="main_section_nav_element">라이프스타일</li>
+                            <li class="main_section_nav_element">브랜딩</li>
+                            <li class="main_section_nav_element">회사생활</li>
+                            <li class="main_section_nav_element">조직문화</li>
+                            <li class="main_section_nav_element">서비스기획</li> -->
+                        </ul>
+                        <div class="main_section_nav_button">
+                            <svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18"><path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path></svg>
+                        </div>
+                        <div class="main_section_nav_dot">
+                            <svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M12 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 12 10zm7 0a2 2 0 1 1-.001 4.001A2 2 0 0 1 19 10zM5 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 5 10z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="main_section_detail_container">
+                        <div class="main_section_detail">
+                        <ul>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_1.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_2.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_15.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_4.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_5.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_6.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_7.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_8.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_9.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_10.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_11.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_12.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_13.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_14.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_15.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_16.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_1.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_8.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_9.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                            <li class="main_section_detail_card">
+                                <img src="../img/main_card/main_card_2.jpg" class="main_section_detail_card_img">
+                                <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
+                                <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
+                                <div class="main_section_detail_card_source">
+                                    <img class="main_section_logo_img" src="../img/main_card/main_section_logo.jpg">
+                                    <div class="main_section_detail_card_source_des">Wanted</div>
+                                </div>
+                            </li>
+                        </ul>
+                        </div>
+                        <div class="main_section_detail_button">
+                            <div>더 많은 콘텐츠 보기<svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 19 19"><path d="M2.71967 5.71967C2.98594 5.4534 3.4026 5.4292 3.69621 5.64705L3.78033 5.71967L9.499 11.438L15.2162 5.7211C15.4824 5.45479 15.899 5.43051 16.1927 5.64832L16.2768 5.72092C16.5431 5.98715 16.5674 6.40381 16.3496 6.69745L16.277 6.78158L10.0304 13.0302C9.76416 13.2966 9.34745 13.3208 9.0538 13.103L8.96967 13.0303L2.71967 6.78033C2.42678 6.48744 2.42678 6.01256 2.71967 5.71967Z" fill="currentColor"></path></svg></div>
+                        </div>
+                    </div>
+                </div>
+                <aside class="main_section_aside">
+                    <img class="main_section_aside_img"src="../img/main_card/main_aside.jpg">
+                    <div class="main_section_aside_detail">즐겨보는<br>크리에이터의 글도<br>추천하고 싶다면?</div>
+                    <div class="main_section_aside_button">크리에이터 추천하기 ></div>
                 </aside>
-            </div>
-        </div>
-    </nav>
-    <main>
-        <div class="main_banner">
-            <div class="main_banner_btn main_banner_prev" onclick="">
-                <svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18"><path d="m6.045 9 5.978-5.977a.563.563 0 1 0-.796-.796L4.852 8.602a.562.562 0 0 0 0 .796l6.375 6.375a.563.563 0 0 0 .796-.796L6.045 9z"></path></svg>
-            </div>
-            <div class="main_banner_btn main_banner_next" onclick="">
-                <svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18"><path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path></svg>
-            </div>
-            <div class="main_banner_container slide_list">
-                <div id="first_item" class="main_banner_element slide_item">
-                    <img class="main_banner_element_img" src="/img/main_banner/main_banner_1.jpg">
-                    <div class="main_banner_element_float">
-                        <div class="main_banner_element_float_title">
-                            <div>프리온보딩 프론트엔드 인턴십 (4월)</div>
-                            <div>기업이 진짜 원하는 프론트엔드 주니어</div>
-                        </div>
-                        <div class="main_banner_element_float_button">
-                            <div>바로가기 ></div>
-                        </div>
+            </section>
+            <div class="main_test">
+                <div class="main_test_container">
+                    <div class="main_test_detail">
+                        내 유형과 가장 어울리는 회사는?
                     </div>
-                </div>
-                <div class="main_banner_element slide_item">
-                    <img class="main_banner_element_img" src="/img/main_banner/main_banner_2.jpg">
-                    <div class="main_banner_element_float">
-                        <div class="main_banner_element_float_title">
-                            <div>프리온보딩 프론트엔드 인턴십 (4월)</div>
-                            <div>기업이 진짜 원하는 프론트엔드 주니어</div>
-                        </div>
-                        <div class="main_banner_element_float_button">
-                            <div>바로가기 ></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="main_banner_element slide_item">
-                    <img class="main_banner_element_img" src="/img/main_banner/main_banner_3.jpg">
-                    <div class="main_banner_element_float">
-                        <div class="main_banner_element_float_title">
-                            <div>프리온보딩 프론트엔드 인턴십 (4월)</div>
-                            <div>기업이 진짜 원하는 프론트엔드 주니어</div>
-                        </div>
-                        <div class="main_banner_element_float_button">
-                            <div>바로가기 ></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="main_banner_element slide_item">
-                    <img class="main_banner_element_img" src="/img/main_banner/main_banner_4.jpg">
-                    <div class="main_banner_element_float">
-                        <div class="main_banner_element_float_title">
-                            <div>프리온보딩 프론트엔드 인턴십 (4월)</div>
-                            <div>기업이 진짜 원하는 프론트엔드 주니어</div>
-                        </div>
-                        <div class="main_banner_element_float_button">
-                            <div>바로가기 ></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="main_banner_element slide_item">
-                    <img class="main_banner_element_img" src="/img/main_banner/main_banner_5.jpg">
-                    <div class="main_banner_element_float">
-                        <div class="main_banner_element_float_title">
-                            <div>프리온보딩 프론트엔드 인턴십 (4월)</div>
-                            <div>기업이 진짜 원하는 프론트엔드 주니어</div>
-                        </div>
-                        <div class="main_banner_element_float_button">
-                            <div>바로가기 ></div>
-                        </div>
-                    </div>
-                </div>
-                <div  id="first_item" class="main_banner_element slide_item">
-                    <img class="main_banner_element_img" src="/img/main_banner/main_banner_6.jpg">
-                    <div class="main_banner_element_float">
-                        <div class="main_banner_element_float_title">
-                            <div>프리온보딩 프론트엔드 인턴십 (4월)</div>
-                            <div>기업이 진짜 원하는 프론트엔드 주니어</div>
-                        </div>
-                        <div class="main_banner_element_float_button">
-                            <div>바로가기 ></div>
-                        </div>
-                    </div>
+                    <div class="main_test_detail_button">유형테스트 하러가기 ></div>
                 </div>
             </div>
-        </div>
-        <section class="main_section">
-            <div class="main_section_container">
-                <div class="main_section_title">나에게 필요한 커리어 인사이트<svg width="24" height="24" viewBox="0 0 17 17"><defs><filter id="bfoh3u0w3a"><feColorMatrix in="SourceGraphic" values="0 0 0 0 0.600000 0 0 0 0 0.600000 0 0 0 0 0.600000 0 0 0 1.000000 0"></feColorMatrix></filter></defs><g fill="none" fill-rule="evenodd"><g><g><g transform="translate(-1080 -374) translate(1080 374)"><g><path stroke="#999" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M9.421 13.334c-.736.277-1.535.43-2.368.43-3.706 0-6.71-3.005-6.71-6.711 0-3.707 3.004-6.71 6.71-6.71 1.853 0 3.53.75 4.745 1.965 1.214 1.214 1.965 2.892 1.965 4.745 0 1.853-.75 3.53-1.965 4.745" transform="translate(1 1)"></path><path fill="#999" d="M6.382 10.408c0-.371.3-.671.67-.671.371 0 .672.3.672.67 0 .372-.3.672-.671.672-.37 0-.671-.3-.671-.671" transform="translate(1 1) rotate(-180 7.053 10.408)"></path><path stroke="#999" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M5.04 5.655c0-1.08.901-1.958 2.013-1.958 1.11 0 2.013.877 2.013 1.958 0 1.08-1.007 1.957-2.013 1.957v.783" transform="translate(1 1)"></path></g></g></g></g></g></svg></div>
-                <div class="main_section_nav">
-                    <ul>
-                        <li class="main_section_nav_element">취업/이직</li>
-                        <li class="main_section_nav_element">IT/기술</li>
-                        <li class="main_section_nav_element">UX/UI</li>
-                        <li class="main_section_nav_element">개발</li>
-                        <li class="main_section_nav_element">인간관계</li>
-                        <li class="main_section_nav_element">MD</li>
-                        <li class="main_section_nav_element">디자인</li>
-                        <li class="main_section_nav_element">콘텐츠 제작</li>
-                        <li class="main_section_nav_element">리더십</li>
-                        <li class="main_section_nav_element">노무</li>
-                        <li class="main_section_nav_element">데이터</li>
-                        <!-- <li class="main_section_nav_element">HR</li>
-                        <li class="main_section_nav_element">경영/전략</li>
-                        <li class="main_section_nav_element">마케팅</li>
-                        <li class="main_section_nav_element">커리어고민</li>
-                        <li class="main_section_nav_element">라이프스타일</li>
-                        <li class="main_section_nav_element">브랜딩</li>
-                        <li class="main_section_nav_element">회사생활</li>
-                        <li class="main_section_nav_element">조직문화</li>
-                        <li class="main_section_nav_element">서비스기획</li> -->
-                    </ul>
-                    <div class="main_section_nav_button">
-                        <svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18"><path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path></svg>
-                    </div>
-                    <div class="main_section_nav_dot">
-                        <svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M12 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 12 10zm7 0a2 2 0 1 1-.001 4.001A2 2 0 0 1 19 10zM5 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 5 10z"></path></svg>
-                    </div>
-                </div>
-                <div class="main_section_detail_container">
-                    <div class="main_section_detail">
-                    <ul>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_1.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_2.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_15.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_4.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_5.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_6.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_7.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_8.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_9.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_10.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_11.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_12.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_13.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_14.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_15.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_16.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_1.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_8.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_9.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                        <li class="main_section_detail_card">
-                            <img src="/img/main_card/main_card_2.jpg" class="main_section_detail_card_img">
-                            <div class="main_section_detail_card_title">쏘카의 프로덕트 디자인 엿보기</div>
-                            <div class="main_section_detail_card_des">비즈니스를 한층 더 성장 시키기 위해 프로덕트 디자이너가 주도적으로 서비스 개선 프로젝트...</div>
-                            <div class="main_section_detail_card_source">
-                                <img class="main_section_logo_img" src="/img/main_card/main_section_logo.jpg">
-                                <div class="main_section_detail_card_source_des">Wanted</div>
-                            </div>
-                        </li>
-                    </ul>
-                    </div>
-                    <div class="main_section_detail_button">
-                        <div>더 많은 콘텐츠 보기<svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 19 19"><path d="M2.71967 5.71967C2.98594 5.4534 3.4026 5.4292 3.69621 5.64705L3.78033 5.71967L9.499 11.438L15.2162 5.7211C15.4824 5.45479 15.899 5.43051 16.1927 5.64832L16.2768 5.72092C16.5431 5.98715 16.5674 6.40381 16.3496 6.69745L16.277 6.78158L10.0304 13.0302C9.76416 13.2966 9.34745 13.3208 9.0538 13.103L8.96967 13.0303L2.71967 6.78033C2.42678 6.48744 2.42678 6.01256 2.71967 5.71967Z" fill="currentColor"></path></svg></div>
-                    </div>
-                </div>
+            <div class="main_middle_banner_container">
+                <div>직군/직무를 입력하면 관련 콘텐츠를 추천해 드려요.👀</div>
             </div>
-            <aside class="main_section_aside">
-                <img class="main_section_aside_img"src="/img/main_card/main_aside.jpg">
-                <div class="main_section_aside_detail">즐겨보는<br>크리에이터의 글도<br>추천하고 싶다면?</div>
-                <div class="main_section_aside_button">크리에이터 추천하기 ></div>
-            </aside>
-        </section>
-        <div class="main_test">
-            <div class="main_test_container">
-                <div class="main_test_detail">
-                    내 유형과 가장 어울리는 회사는?
-                </div>
-                <div class="main_test_detail_button">유형테스트 하러가기 ></div>
-            </div>
-        </div>
-        <div class="main_middle_banner_container">
-            <div>직군/직무를 입력하면 관련 콘텐츠를 추천해 드려요.👀</div>
-        </div>
-        <section class="main_event">
-            <div class="main_event_container">
-                <div class="main_event_title">
-                    <div class="main_event_title_button main_event_prev"><svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18"><path d="m6.045 9 5.978-5.977a.563.563 0 1 0-.796-.796L4.852 8.602a.562.562 0 0 0 0 .796l6.375 6.375a.563.563 0 0 0 .796-.796L6.045 9z"></path></svg></div>
-                    <div class="main_event_title_detail">
-                        <div class="main_event_title_detail_des">커리어 성장을 위한 맞춤 이벤트</div>
-                        <div class="main_event_title_detail_button">이벤트 전체보기 <svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18"><path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path></svg></div>
+            <section class="main_event">
+                <div class="main_event_container">
+                    <div class="main_event_title">
+                        <div class="main_event_title_button main_event_prev"><svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18"><path d="m6.045 9 5.978-5.977a.563.563 0 1 0-.796-.796L4.852 8.602a.562.562 0 0 0 0 .796l6.375 6.375a.563.563 0 0 0 .796-.796L6.045 9z"></path></svg></div>
+                        <div class="main_event_title_detail">
+                            <div class="main_event_title_detail_des">커리어 성장을 위한 맞춤 이벤트</div>
+                            <div class="main_event_title_detail_button">이벤트 전체보기 <svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18"><path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path></svg></div>
+                        </div>
+                        <div class="main_event_title_button main_event_next"><svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18"><path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path></svg></div>
                     </div>
-                    <div class="main_event_title_button main_event_next"><svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18"><path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path></svg></div>
-                </div>
-                <div class="main_event_detail">
-                    <div class="main_event_wrapper">
-                        <div class="main_event_detail_card">
-                            <div class="main_event_detail_card_container">
-                                <img class="main_event_detail_card_img" src="/img/main_event/main_event_1.jpg">
+                    <div class="main_event_detail">
+                        <div class="main_event_wrapper">
+                            <div class="main_event_detail_card">
+                                <div class="main_event_detail_card_container">
+                                    <img class="main_event_detail_card_img" src="../img/main_event/main_event_1.jpg">
+                                </div>
+                                <div class="main_event_detail_card_button">아티클</div>
+                                <div class="main_event_detail_card_des">오늘부터 팀장 | 팀워크를 위한 3가지 실천 사항</div>
                             </div>
-                            <div class="main_event_detail_card_button">아티클</div>
-                            <div class="main_event_detail_card_des">오늘부터 팀장 | 팀워크를 위한 3가지 실천 사항</div>
+                            <div class="main_event_detail_card">
+                                <div class="main_event_detail_card_container">
+                                    <img class="main_event_detail_card_img" src="../img/main_event/main_event_2.jpg">
+                                </div>
+                                <div class="main_event_detail_card_button">아티클</div>
+                                <div class="main_event_detail_card_des">오늘부터 팀장 | 팀워크를 위한 3가지 실천 사항</div>
+                            </div>
                         </div>
-                        <div class="main_event_detail_card">
-                            <div class="main_event_detail_card_container">
-                                <img class="main_event_detail_card_img" src="/img/main_event/main_event_2.jpg">
+                        <div class="main_event_wrapper">
+                            <div class="main_event_detail_card">
+                                <div class="main_event_detail_card_container">
+                                    <img class="main_event_detail_card_img" src="../img/main_event/main_event_3.jpg">
+                                </div>
+                                <div class="main_event_detail_card_button">아티클</div>
+                                <div class="main_event_detail_card_des">오늘부터 팀장 | 팀워크를 위한 3가지 실천 사항</div>
                             </div>
-                            <div class="main_event_detail_card_button">아티클</div>
-                            <div class="main_event_detail_card_des">오늘부터 팀장 | 팀워크를 위한 3가지 실천 사항</div>
+                            <div class="main_event_detail_card">
+                                <div class="main_event_detail_card_container">
+                                    <img class="main_event_detail_card_img" src="../img/main_event/main_event_4.jpg">
+                                </div>
+                                <div class="main_event_detail_card_button">아티클</div>
+                                <div class="main_event_detail_card_des">오늘부터 팀장 | 팀워크를 위한 3가지 실천 사항</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="main_event_wrapper">
-                        <div class="main_event_detail_card">
-                            <div class="main_event_detail_card_container">
-                                <img class="main_event_detail_card_img" src="/img/main_event/main_event_3.jpg">
+                        <div class="main_event_wrapper">
+                            <div class="main_event_detail_card">
+                                <div class="main_event_detail_card_container">
+                                    <img class="main_event_detail_card_img" src="../img/main_event/main_event_5.jpg">
+                                </div>
+                                <div class="main_event_detail_card_button">아티클</div>
+                                <div class="main_event_detail_card_des">오늘부터 팀장 | 팀워크를 위한 3가지 실천 사항</div>
                             </div>
-                            <div class="main_event_detail_card_button">아티클</div>
-                            <div class="main_event_detail_card_des">오늘부터 팀장 | 팀워크를 위한 3가지 실천 사항</div>
-                        </div>
-                        <div class="main_event_detail_card">
-                            <div class="main_event_detail_card_container">
-                                <img class="main_event_detail_card_img" src="/img/main_event/main_event_4.jpg">
+                            <div class="main_event_detail_card">
+                                <div class="main_event_detail_card_container">
+                                    <img class="main_event_detail_card_img" src="../img/main_event/main_event_6.jpg">
+                                </div>
+                                <div class="main_event_detail_card_button">아티클</div>
+                                <div class="main_event_detail_card_des">오늘부터 팀장 | 팀워크를 위한 3가지 실천 사항</div>
                             </div>
-                            <div class="main_event_detail_card_button">아티클</div>
-                            <div class="main_event_detail_card_des">오늘부터 팀장 | 팀워크를 위한 3가지 실천 사항</div>
-                        </div>
-                    </div>
-                    <div class="main_event_wrapper">
-                        <div class="main_event_detail_card">
-                            <div class="main_event_detail_card_container">
-                                <img class="main_event_detail_card_img" src="/img/main_event/main_event_5.jpg">
-                            </div>
-                            <div class="main_event_detail_card_button">아티클</div>
-                            <div class="main_event_detail_card_des">오늘부터 팀장 | 팀워크를 위한 3가지 실천 사항</div>
-                        </div>
-                        <div class="main_event_detail_card">
-                            <div class="main_event_detail_card_container">
-                                <img class="main_event_detail_card_img" src="/img/main_event/main_event_6.jpg">
-                            </div>
-                            <div class="main_event_detail_card_button">아티클</div>
-                            <div class="main_event_detail_card_des">오늘부터 팀장 | 팀워크를 위한 3가지 실천 사항</div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="main_find">
-            <div class="main_find_container">
-                <div class="main_find_title">채용 정보를 찾고 계셨나요?</div>
-                <div class="main_find_card_container">
-                    <div class="main_find_card">
-                        <div class="main_find_card_emo">
-                            <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 18 18"><defs><path id="qt2dnsql4a" d="M15.727 17.273a.563.563 0 10.796-.796l-4.875-4.875-.19-.165a.563.563 0 00-.764.028 5.063 5.063 0 111.261-2.068.562.562 0 101.073.338 6.188 6.188 0 10-1.943 2.894l4.642 4.644z"></path></defs><g fill="none" fill-rule="evenodd"><use fill="#333" fill-rule="nonzero" stroke="#333" stroke-width=".3" xlink:href="#qt2dnsql4a"></use></g></svg>
+            </section>
+            <section class="main_find">
+                <div class="main_find_container">
+                    <div class="main_find_title">채용 정보를 찾고 계셨나요?</div>
+                    <div class="main_find_card_container">
+                        <div class="main_find_card">
+                            <div class="main_find_card_emo">
+                                <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 18 18"><defs><path id="qt2dnsql4a" d="M15.727 17.273a.563.563 0 10.796-.796l-4.875-4.875-.19-.165a.563.563 0 00-.764.028 5.063 5.063 0 111.261-2.068.562.562 0 101.073.338 6.188 6.188 0 10-1.943 2.894l4.642 4.644z"></path></defs><g fill="none" fill-rule="evenodd"><use fill="#333" fill-rule="nonzero" stroke="#333" stroke-width=".3" xlink:href="#qt2dnsql4a"></use></g></svg>
+                            </div>
+                            <div class="main_find_card_detail">채용공고 ></div>
                         </div>
-                        <div class="main_find_card_detail">채용공고 ></div>
-                    </div>
-                    <div class="main_find_card">
-                        <div class="main_find_card_emo">
-                            <svg width="28" height="28" viewBox="0 0 28 28" xmlns="https://www.w3.org/2000/svg"><defs><path d="M16.46 12.565c-.631.802-1.025 1.667-1.039 2.59-.02 1.45.793 2.538 2.286 3.154l.116.038c3.487.898 5.788 2.958 5.788 5.03l.014 1.226c0 .026-.194.188-.35.189H4.662c-.136 0-.274-.122-.274-.178l-.014-1.248c0-1.997 2.086-3.93 5.412-4.868a4.468 4.468 0 0 0 1.275-.538c.775-.474 1.316-1.135 1.448-2.014a.875.875 0 0 0-1.731-.259c-.044.292-.256.552-.629.779a2.898 2.898 0 0 1-.795.337c-4.04 1.137-6.73 3.632-6.73 6.573l.014 1.248c0 1.062.965 1.918 2.024 1.918h18.613c1.061-.003 2.099-.871 2.099-1.949l-.014-1.227c0-3.003-2.9-5.612-7.039-6.697-.825-.354-1.16-.816-1.15-1.49.006-.473.248-1.003.663-1.53.272-.346.545-.606.71-.736l.087-.08c1.233-1.29 2.03-3 2.03-4.666 0-3.648-3.053-6.709-6.692-6.709-3.639 0-6.692 3.061-6.692 6.709 0 1.57.443 2.914 1.357 4.048a.875.875 0 1 0 1.363-1.097c-.655-.813-.97-1.768-.97-2.951 0-2.682 2.27-4.959 4.942-4.959s4.941 2.276 4.941 4.959c0 1.162-.587 2.437-1.506 3.417-.258.211-.6.545-.944.981z" id="IconProfileThick-a"></path></defs><g fill="none" fill-rule="evenodd"><mask id="IconProfileThick-b" fill="#fff"><use xlink:href="#IconProfileThick-a"></use></mask><use fill="#333" fill-rule="nonzero" xlink:href="#IconProfileThick-a"></use><g mask="url(#IconProfileThick-b)" fill="#333"><path d="M0 0h28v28H0z"></path></g></g></svg>
+                        <div class="main_find_card">
+                            <div class="main_find_card_emo">
+                                <svg width="28" height="28" viewBox="0 0 28 28" xmlns="https://www.w3.org/2000/svg"><defs><path d="M16.46 12.565c-.631.802-1.025 1.667-1.039 2.59-.02 1.45.793 2.538 2.286 3.154l.116.038c3.487.898 5.788 2.958 5.788 5.03l.014 1.226c0 .026-.194.188-.35.189H4.662c-.136 0-.274-.122-.274-.178l-.014-1.248c0-1.997 2.086-3.93 5.412-4.868a4.468 4.468 0 0 0 1.275-.538c.775-.474 1.316-1.135 1.448-2.014a.875.875 0 0 0-1.731-.259c-.044.292-.256.552-.629.779a2.898 2.898 0 0 1-.795.337c-4.04 1.137-6.73 3.632-6.73 6.573l.014 1.248c0 1.062.965 1.918 2.024 1.918h18.613c1.061-.003 2.099-.871 2.099-1.949l-.014-1.227c0-3.003-2.9-5.612-7.039-6.697-.825-.354-1.16-.816-1.15-1.49.006-.473.248-1.003.663-1.53.272-.346.545-.606.71-.736l.087-.08c1.233-1.29 2.03-3 2.03-4.666 0-3.648-3.053-6.709-6.692-6.709-3.639 0-6.692 3.061-6.692 6.709 0 1.57.443 2.914 1.357 4.048a.875.875 0 1 0 1.363-1.097c-.655-.813-.97-1.768-.97-2.951 0-2.682 2.27-4.959 4.942-4.959s4.941 2.276 4.941 4.959c0 1.162-.587 2.437-1.506 3.417-.258.211-.6.545-.944.981z" id="IconProfileThick-a"></path></defs><g fill="none" fill-rule="evenodd"><mask id="IconProfileThick-b" fill="#fff"><use xlink:href="#IconProfileThick-a"></use></mask><use fill="#333" fill-rule="nonzero" xlink:href="#IconProfileThick-a"></use><g mask="url(#IconProfileThick-b)" fill="#333"><path d="M0 0h28v28H0z"></path></g></g></svg>
+                            </div>
+                            <div class="main_find_card_detail">내 프로필 ></div>
                         </div>
-                        <div class="main_find_card_detail">내 프로필 ></div>
-                    </div>
-                    <div class="main_find_card">
-                        <div class="main_find_card_emo">
-                            <svg width="32" height="32" viewBox="0 0 28 28" xmlns="https://www.w3.org/2000/svg"><defs><path d="M10.208 25.083a.875.875 0 0 1-.875-.875v-6.125h-1.75v6.125a.875.875 0 0 1-.875.875H2.042a.875.875 0 0 1-.875-.875V4.375c0-.483.391-.875.875-.875h12.833c.483 0 .875.392.875.875v3.791h9.625c.446 0 .814.334.868.766l.007.11v10.5a.875.875 0 0 1-1.75 0V9.917h-8.75v13.416h9.625a.875.875 0 0 1 0 1.75H10.208zM14 5.25H2.917v18.083h2.916v-6.125c0-.483.392-.875.875-.875h3.5c.484 0 .875.392.875.875v6.125H14V5.25zm4.375 10.792c.644 0 1.167.522 1.167 1.166v1.167a1.167 1.167 0 0 1-2.334 0v-1.167c0-.644.523-1.166 1.167-1.166zm0-4.667c.644 0 1.167.522 1.167 1.167v1.166a1.167 1.167 0 0 1-2.334 0v-1.166c0-.645.523-1.167 1.167-1.167zm-11.5 0a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1h-.333a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h.333zm0-4.667a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1h-.333a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h.333z" id="building-icon-a"></path></defs><g fill="none" fill-rule="evenodd"><mask id="building-icon-b" fill="#fff"><use xlink:href="#building-icon-a"></use></mask><use fill="#333" fill-rule="nonzero" xlink:href="#building-icon-a"></use><g mask="url(#building-icon-b)" fill="#333"><path d="M0 0h28v28H0z"></path></g></g></svg>
+                        <div class="main_find_card">
+                            <div class="main_find_card_emo">
+                                <svg width="32" height="32" viewBox="0 0 28 28" xmlns="https://www.w3.org/2000/svg"><defs><path d="M10.208 25.083a.875.875 0 0 1-.875-.875v-6.125h-1.75v6.125a.875.875 0 0 1-.875.875H2.042a.875.875 0 0 1-.875-.875V4.375c0-.483.391-.875.875-.875h12.833c.483 0 .875.392.875.875v3.791h9.625c.446 0 .814.334.868.766l.007.11v10.5a.875.875 0 0 1-1.75 0V9.917h-8.75v13.416h9.625a.875.875 0 0 1 0 1.75H10.208zM14 5.25H2.917v18.083h2.916v-6.125c0-.483.392-.875.875-.875h3.5c.484 0 .875.392.875.875v6.125H14V5.25zm4.375 10.792c.644 0 1.167.522 1.167 1.166v1.167a1.167 1.167 0 0 1-2.334 0v-1.167c0-.644.523-1.166 1.167-1.166zm0-4.667c.644 0 1.167.522 1.167 1.167v1.166a1.167 1.167 0 0 1-2.334 0v-1.166c0-.645.523-1.167 1.167-1.167zm-11.5 0a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1h-.333a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h.333zm0-4.667a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1h-.333a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h.333z" id="building-icon-a"></path></defs><g fill="none" fill-rule="evenodd"><mask id="building-icon-b" fill="#fff"><use xlink:href="#building-icon-a"></use></mask><use fill="#333" fill-rule="nonzero" xlink:href="#building-icon-a"></use><g mask="url(#building-icon-b)" fill="#333"><path d="M0 0h28v28H0z"></path></g></g></svg>
+                            </div>
+                            <div class="main_find_card_detail">매치업 ></div>
                         </div>
-                        <div class="main_find_card_detail">매치업 ></div>
-                    </div>
-                    <div class="main_find_card">
-                        <div class="main_find_card_emo">
-                            <svg width="30" height="30" viewBox="0 0 15 15" fill="none" xmlns="https://www.w3.org/2000/svg"><path d="M4.66699 10.51C5.55699 10.51 6.30999 11.11 6.54099 11.927H13.875C14.168 11.927 14.406 12.165 14.406 12.458C14.406 12.752 14.168 12.99 13.875 12.99H6.54099C6.30999 13.807 5.55799 14.406 4.66699 14.406C3.77499 14.406 3.02299 13.806 2.79199 12.989H1.12499C0.831994 12.989 0.593994 12.752 0.593994 12.459C0.593994 12.165 0.831994 11.927 1.12499 11.927H2.79199C3.02399 11.109 3.77599 10.51 4.66699 10.51V10.51ZM4.66699 11.573C4.17799 11.573 3.78099 11.97 3.78099 12.458C3.78099 12.947 4.17799 13.344 4.66699 13.344C5.15499 13.344 5.55199 12.947 5.55199 12.458C5.55199 11.97 5.15499 11.573 4.66699 11.573ZM10.333 5.55299C11.225 5.55299 11.977 6.15199 12.208 6.96899H13.875C14.168 6.96899 14.406 7.20699 14.406 7.49999C14.406 7.79299 14.168 8.03099 13.875 8.03099H12.208C11.976 8.84899 11.224 9.44799 10.333 9.44799C9.44299 9.44799 8.68999 8.84799 8.45899 8.03199H1.12499C0.831994 8.03199 0.593994 7.79299 0.593994 7.49999C0.593994 7.20699 0.831994 6.96899 1.12499 6.96899H8.45899C8.68999 6.15199 9.44199 5.55199 10.333 5.55199V5.55299ZM10.333 6.61499C9.84499 6.61499 9.44799 7.01099 9.44799 7.49999C9.44799 7.98899 9.84499 8.38499 10.333 8.38499C10.822 8.38499 11.219 7.98899 11.219 7.49999C11.219 7.01099 10.822 6.61499 10.333 6.61499V6.61499ZM4.66699 0.593994C5.55699 0.593994 6.30999 1.19299 6.54099 2.00999H13.875C14.168 2.00999 14.406 2.24799 14.406 2.54199C14.406 2.83499 14.168 3.07199 13.875 3.07199L6.54099 3.07399C6.30899 3.89099 5.55799 4.48999 4.66699 4.48999C3.77599 4.48999 3.02399 3.88999 2.79199 3.07399L1.12499 3.07299C0.831994 3.07299 0.593994 2.83499 0.593994 2.54199C0.593994 2.24799 0.831994 2.00999 1.12499 2.00999H2.79199C3.02399 1.19299 3.77599 0.593994 4.66699 0.593994V0.593994ZM4.66699 1.65599C4.17799 1.65599 3.78099 2.05299 3.78099 2.54199C3.78099 3.02999 4.17799 3.42699 4.66699 3.42699C5.15499 3.42699 5.55199 3.02999 5.55199 2.54199C5.55199 2.05299 5.15499 1.65599 4.66699 1.65599V1.65599Z" fill="#333"></path></svg>
+                        <div class="main_find_card">
+                            <div class="main_find_card_emo">
+                                <svg width="30" height="30" viewBox="0 0 15 15" fill="none" xmlns="https://www.w3.org/2000/svg"><path d="M4.66699 10.51C5.55699 10.51 6.30999 11.11 6.54099 11.927H13.875C14.168 11.927 14.406 12.165 14.406 12.458C14.406 12.752 14.168 12.99 13.875 12.99H6.54099C6.30999 13.807 5.55799 14.406 4.66699 14.406C3.77499 14.406 3.02299 13.806 2.79199 12.989H1.12499C0.831994 12.989 0.593994 12.752 0.593994 12.459C0.593994 12.165 0.831994 11.927 1.12499 11.927H2.79199C3.02399 11.109 3.77599 10.51 4.66699 10.51V10.51ZM4.66699 11.573C4.17799 11.573 3.78099 11.97 3.78099 12.458C3.78099 12.947 4.17799 13.344 4.66699 13.344C5.15499 13.344 5.55199 12.947 5.55199 12.458C5.55199 11.97 5.15499 11.573 4.66699 11.573ZM10.333 5.55299C11.225 5.55299 11.977 6.15199 12.208 6.96899H13.875C14.168 6.96899 14.406 7.20699 14.406 7.49999C14.406 7.79299 14.168 8.03099 13.875 8.03099H12.208C11.976 8.84899 11.224 9.44799 10.333 9.44799C9.44299 9.44799 8.68999 8.84799 8.45899 8.03199H1.12499C0.831994 8.03199 0.593994 7.79299 0.593994 7.49999C0.593994 7.20699 0.831994 6.96899 1.12499 6.96899H8.45899C8.68999 6.15199 9.44199 5.55199 10.333 5.55199V5.55299ZM10.333 6.61499C9.84499 6.61499 9.44799 7.01099 9.44799 7.49999C9.44799 7.98899 9.84499 8.38499 10.333 8.38499C10.822 8.38499 11.219 7.98899 11.219 7.49999C11.219 7.01099 10.822 6.61499 10.333 6.61499V6.61499ZM4.66699 0.593994C5.55699 0.593994 6.30999 1.19299 6.54099 2.00999H13.875C14.168 2.00999 14.406 2.24799 14.406 2.54199C14.406 2.83499 14.168 3.07199 13.875 3.07199L6.54099 3.07399C6.30899 3.89099 5.55799 4.48999 4.66699 4.48999C3.77599 4.48999 3.02399 3.88999 2.79199 3.07399L1.12499 3.07299C0.831994 3.07299 0.593994 2.83499 0.593994 2.54199C0.593994 2.24799 0.831994 2.00999 1.12499 2.00999H2.79199C3.02399 1.19299 3.77599 0.593994 4.66699 0.593994V0.593994ZM4.66699 1.65599C4.17799 1.65599 3.78099 2.05299 3.78099 2.54199C3.78099 3.02999 4.17799 3.42699 4.66699 3.42699C5.15499 3.42699 5.55199 3.02999 5.55199 2.54199C5.55199 2.05299 5.15499 1.65599 4.66699 1.65599V1.65599Z" fill="#333"></path></svg>
+                            </div>
+                            <div class="main_find_card_detail">직군별 연봉 ></div>
                         </div>
-                        <div class="main_find_card_detail">직군별 연봉 ></div>
                     </div>
                 </div>
-            </div>
 
-        </section>
-    </main>
-    <footer>
-        <div class="footer_container">
-            <div class="footer_nav">
-                <div class="footer_nav_container">
-                    <div class="footer_logo">
-                        <img class="footer_logo_img" src="/img/wanted_logo.jpg"></img>
+            </section>
+        </main>
+        <footer>
+            <div class="footer_container">
+                <div class="footer_nav">
+                    <div class="footer_nav_container">
+                        <div class="footer_logo">
+                            <img class="footer_logo_img" src="../img/wanted_logo.jpg"></img>
+                        </div>
+                        <ul>
+                            <li class="footer_nav_element">기업소개</li>
+                            <li class="footer_nav_element">이용약관</li>
+                            <li class="footer_nav_element">고객센터</li>
+                            <li class="footer_nav_element">개인정보 처리방침</li>
+                        </ul>
                     </div>
-                    <ul>
-                        <li class="footer_nav_element">기업소개</li>
-                        <li class="footer_nav_element">이용약관</li>
-                        <li class="footer_nav_element">고객센터</li>
-                        <li class="footer_nav_element">개인정보 처리방침</li>
-                    </ul>
+                    <div class="footer_emo_container">
+                        <img class="footer_emo" src="../img/footer/footer_1.jpg"></img>
+                        <img class="footer_emo" src="../img/footer/footer_2.jpg"></img>
+                        <img class="footer_emo" src="../img/footer/footer_3.jpg"></img>
+                        <img class="footer_emo" src="../img/footer/footer_4.jpg"></img>
+                        <img class="footer_emo" src="../img/footer/footer_5.jpg"></img>
+                        <img class="footer_emo" src="../img/footer/footer_6.jpg"></img>
+                    </div>
                 </div>
-                <div class="footer_emo_container">
-                    <img class="footer_emo" src="/img/footer/footer_1.jpg"></img>
-                    <img class="footer_emo" src="/img/footer/footer_2.jpg"></img>
-                    <img class="footer_emo" src="/img/footer/footer_3.jpg"></img>
-                    <img class="footer_emo" src="/img/footer/footer_4.jpg"></img>
-                    <img class="footer_emo" src="/img/footer/footer_5.jpg"></img>
-                    <img class="footer_emo" src="/img/footer/footer_6.jpg"></img>
+                <div class="footer_detail">(주)원티드랩 (대표이사:이복기) | 서울특별시 송파구 올림픽로 300 롯데월드타워 35층 | 통신판매번호 : 2020-서울송파-3147<br>
+                    유료직업소개사업등록번호 : (국내) 제2020-3230259-14-5-00018호 | 사업자등록번호 : 299-86-00021 | 02-539-7118<br>
+                    © Wantedlab, Inc.
                 </div>
             </div>
-            <div class="footer_detail">(주)원티드랩 (대표이사:이복기) | 서울특별시 송파구 올림픽로 300 롯데월드타워 35층 | 통신판매번호 : 2020-서울송파-3147<br>
-                유료직업소개사업등록번호 : (국내) 제2020-3230259-14-5-00018호 | 사업자등록번호 : 299-86-00021 | 02-539-7118<br>
-                © Wantedlab, Inc.
-            </div>
-        </div>
-    </footer>
-
+        </footer>
+    </div>
     <script>
         const carouselSlide = document.querySelector(".main_event_detail");
         const carouselContents = document.querySelectorAll(".main_event_wrapper");
@@ -512,7 +517,7 @@
 
         //counter
         let counter = 1;
-        const size = carouselContents[0].clientWidth;
+        const size = carouselContents[0].clientWidth + 35;
 
         carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
 
@@ -557,7 +562,8 @@
 
         //Button Listeners
         nextEventBtn.addEventListener("click", () => {
-            if (counter >= carouselEventContents.length - 1) return;
+            if (counter >= carouselEventContents.length - 1);
+            
             else
             carouselEventSlide.style.transition = "transform 0.3s ease-in-out";
             counter++;
@@ -565,7 +571,7 @@
         });
         
         prevEventBtn.addEventListener("click", () => {
-            if (counter <= 0) return;
+            if (counter <= 0);
             else
             carouselEventSlide.style.transition = "transform 0.3s ease-in-out";
             counter--;
@@ -580,6 +586,22 @@
         
         cloneEventElement();
         
+        const spinner = document.querySelector('.spinner');
+        const content = document.getElementById('container')
+        
+        // 3초 후에 실행할 함수
+        function showContent() {
+            spinner.style.display = 'none'; // 스피너 숨기기
+            content.style.display = 'block'; // 컨텐츠 보이기
+            console.log('로딩 완료');
+        }
+        
+        // 로딩 시작
+        spinner.style.display = 'block';
+        content.style.display = 'none';
+        // 3초 후에 showContent 함수 실행
+        setTimeout(showContent, 3000);
+
     </script>
 </body>
 </html>
