@@ -53,7 +53,17 @@
 }
 
 .main_nav_Element {
+    display: flex;
     font-size: 14px;
+    align-items: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+.main_nav_Element :hover {
+    margin: 0;
+    padding: 0;
+    border-bottom: 3px solid rgba(0, 0, 0, .1);
 }
 
 .main_nav_aside {
@@ -99,6 +109,10 @@
     border: 1px solid rgba(0, 0, 0, .1);
     border-radius: 30px;
     opacity: 0.5;
+}
+
+.login a:hover {
+    cursor: pointer;
 }
 
 .glass {
