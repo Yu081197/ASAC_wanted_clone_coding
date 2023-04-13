@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/main/main.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/spinner.css">
+    <link rel="stylesheet" href="../css/modal/modalLogin.css">
     <link rel="stylesheet" href="../css/main/mainBanner.css">
     <link rel="stylesheet" href="../css/main/mainSection.css">
     <link rel="stylesheet" href="../css/main/mainMiddleBanner.css">
@@ -26,13 +27,12 @@
     <div id="spinner_container" class="spinner_container">
         <div id="spinner" class="spinner"></div>
     </div>
-    <div id="container">
+    <div id="container" class="container">
         <nav class="top_nav">
             <div class="top_nav_container">
                 <div class="main_logo">
-                    <a href="main.html">
                     <img src="../img/nav_tab.jpg" class="main_logo_nav">
-                    <img src="../img/main_logo.jpg" class="main_logo_img">
+                    <a href="main.html"><img src="../img/main_logo.jpg" class="main_logo_img"></a>
                 </div>
                 <div class="top_nav_main_container">
                     <ul class="main_nav">
@@ -49,7 +49,7 @@
                             <li>
                                 <img class="main_nav_aside_element glass" src="../img/glass.jpg"></img>
                             </li>
-                            <li class="main_nav_aside_element login">회원가입/로그인</li>
+                            <li class="main_nav_aside_element login" onclick=""><a href="#">회원가입/로그인</a></li>
                         </ul>
                         <ul>
                             <li class="main_nav_aside_element_emoji">|</li>
@@ -508,84 +508,87 @@
         </footer>
     </div>
     <script>
-        const carouselSlide = document.querySelector(".main_event_detail");
-        const carouselContents = document.querySelectorAll(".main_event_wrapper");
+        const carouselSlide = document.querySelector(".slide_list");
+        const carouselContents = document.querySelectorAll(".slide_item");
 
-        const prevBtn = document.querySelector(".main_event_prev");
-        const nextBtn = document.querySelector(".main_event_next");
+        const prevBtn = document.querySelector(".main_banner_prev");
+        const nextBtn = document.querySelector(".main_banner_next");
 
         const lastIndex = carouselContents.length - 1;
 
         //counter
-        let counter = 1;
-        const size = carouselContents[0].clientWidth + 35;
+        let counter = 0;
+        const size = carouselContents[0].clientWidth + 25;
 
         carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
 
         //Button Listeners
         nextBtn.addEventListener("click", () => {
-            if (counter >= carouselContents.length - 1) return;
+            if (counter >= carouselContents.length - 1)
+            cloneAppendElement();
             else
             carouselSlide.style.transition = "transform 0.3s ease-in-out";
             counter++;
             carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+            console.log(counter)
         });
         
         prevBtn.addEventListener("click", () => {
-            if (counter <= 0) return;
+            if (counter <= 0)
+            clonePrependElement();
             else
             carouselSlide.style.transition = "transform 0.3s ease-in-out";
             counter--;
             carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+            console.log(counter)
         });
-        console.log(carouselContents.length);
 
-        const cloneElement = () => {
+        const clonePrependElement = () => {
             carouselSlide.prepend(carouselContents[lastIndex].cloneNode(true));
+            
+        };
+
+
+        const cloneAppendElement = () => {
             carouselSlide.append(carouselContents[0].cloneNode(true));
+            
         };
         
-        cloneElement();
 
-        const carouselEventSlide = document.querySelector(".slide_list");
-        const carouselEventContents = document.querySelectorAll(".slide_item");
 
-        const prevEventBtn = document.querySelector(".main_banner_prev");
-        const nextEventBtn = document.querySelector(".main_banner_next");
+        const carouselEventSlide = document.querySelector(".main_event_detail");
+        const carouselEventContents = document.querySelectorAll(".main_event_wrapper");
+
+        const prevEventBtn = document.querySelector(".main_event_prev");
+        const nextEventBtn = document.querySelector(".main_event_next");
+        
 
         const eventLastIndex = carouselContents.length - 1;
 
         //counter
-        let eventCounter = 1;
+        let eventCounter = 0;
         const eventSize = carouselContents[0].clientWidth;
 
-        carouselEventSlide.style.transform = "translateX(" + -size * counter + "px)";
+        carouselEventSlide.style.transform = "translateX(" + -eventSize * eventCounter + "px)";
 
         //Button Listeners
         nextEventBtn.addEventListener("click", () => {
-            if (counter >= carouselEventContents.length - 1);
-            
+            if (eventCounter >= 2) return;
             else
             carouselEventSlide.style.transition = "transform 0.3s ease-in-out";
-            counter++;
-            carouselEventSlide.style.transform = "translateX(" + -size * counter + "px)";
+            eventCounter++;
+            carouselEventSlide.style.transform = "translateX(" + -eventSize * eventCounter + "px)";
+            console.log(eventCounter)
         });
         
         prevEventBtn.addEventListener("click", () => {
-            if (counter <= 0);
+            if (eventCounter <= 0) return;
             else
             carouselEventSlide.style.transition = "transform 0.3s ease-in-out";
-            counter--;
-            carouselEventSlide.style.transform = "translateX(" + -size * counter + "px)";
+            eventCounter--;
+            carouselEventSlide.style.transform = "translateX(" + -size * eventCounter + "px)";
         });
-        console.log(carouselEventContents.length);
 
-        const cloneEventElement = () => {
-            carouselEventSlide.prepend(carouselEventContents[lastIndex].cloneNode(true));
-            carouselEventSlide.append(carouselEventContents[0].cloneNode(true));
-        };
-        
-        cloneEventElement();
         
         const spinner = document.querySelector('.spinner');
         const content = document.getElementById('container')

@@ -1,3 +1,7 @@
+main {
+    position: relative;
+}
+
 .jobposting_wrapper {
     display: flex;
     justify-content: center;
