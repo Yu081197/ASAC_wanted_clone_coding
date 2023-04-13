@@ -517,7 +517,7 @@
         const lastIndex = carouselContents.length - 1;
 
         //counter
-        let counter = 0;
+        let counter = 1;
         const size = carouselContents[0].clientWidth + 25;
 
         carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
@@ -525,29 +525,29 @@
         //Button Listeners
         nextBtn.addEventListener("click", () => {
             if (counter >= carouselContents.length - 1) {
+                counter++;
                 cloneAppendElement();
                 carouselSlide.style.transition = "transform 0.3s ease-in-out";
-                counter++;
                 carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
             }
             else {
-                carouselSlide.style.transition = "transform 0.3s ease-in-out";
                 counter++;
+                carouselSlide.style.transition = "transform 0.3s ease-in-out";
                 carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
             }
         });
         
         prevBtn.addEventListener("click", () => {
-            if (counter <= 0) {
-                carouselSlide.style.transition = "transform 0.3s ease-in-out";
-                clonePrependElement()
+            if (counter <= 1) {
                 counter--;
+                clonePrependElement()
+                carouselSlide.style.transition = "transform 0.3s ease-in-out";
                 carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
                 console.log();
             }
             else {
-                carouselSlide.style.transition = "transform 0.3s ease-in-out";
                 counter--;
+                carouselSlide.style.transition = "transform 0.3s ease-in-out";
                 carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
                 console.log();
             }
@@ -561,6 +561,7 @@
             carouselSlide.append(carouselContents[counter % 6].cloneNode(true));
         };
 
+        
         clonePrependElement();
         cloneAppendElement();
 
@@ -613,7 +614,7 @@
         spinner.style.display = 'block';
         content.style.display = 'none';
         // 3초 후에 showContent 함수 실행
-        setTimeout(showContent, 3000);
+        setTimeout(showContent, 0);
 
     </script>
 </body>
