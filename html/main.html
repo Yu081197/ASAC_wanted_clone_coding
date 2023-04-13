@@ -524,36 +524,45 @@
 
         //Button Listeners
         nextBtn.addEventListener("click", () => {
-            if (counter >= carouselContents.length - 1)
-            cloneAppendElement();
-            else
-            carouselSlide.style.transition = "transform 0.3s ease-in-out";
-            counter++;
-            carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-            console.log(counter)
+            if (counter >= carouselContents.length - 1) {
+                cloneAppendElement();
+                carouselSlide.style.transition = "transform 0.3s ease-in-out";
+                counter++;
+                carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+            }
+            else {
+                carouselSlide.style.transition = "transform 0.3s ease-in-out";
+                counter++;
+                carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+            }
         });
         
         prevBtn.addEventListener("click", () => {
-            if (counter <= 0)
-            clonePrependElement();
-            else
-            carouselSlide.style.transition = "transform 0.3s ease-in-out";
-            counter--;
-            carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-            console.log(counter)
+            if (counter <= 0) {
+                carouselSlide.style.transition = "transform 0.3s ease-in-out";
+                clonePrependElement()
+                counter--;
+                carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+                console.log();
+            }
+            else {
+                carouselSlide.style.transition = "transform 0.3s ease-in-out";
+                counter--;
+                carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+                console.log();
+            }
         });
 
         const clonePrependElement = () => {
-            carouselSlide.prepend(carouselContents[lastIndex].cloneNode(true));
-            
+            carouselSlide.prepend(carouselContents[0].cloneNode(true));
         };
-
 
         const cloneAppendElement = () => {
-            carouselSlide.append(carouselContents[0].cloneNode(true));
-            
+            carouselSlide.append(carouselContents[counter % 6].cloneNode(true));
         };
-        
+
+        clonePrependElement();
+        cloneAppendElement();
 
 
         const carouselEventSlide = document.querySelector(".main_event_detail");
