@@ -155,3 +155,7 @@ main {
 .close:hover {
     cursor: pointer;
 }
+
+.next {
+    cursor: pointer;
+}
