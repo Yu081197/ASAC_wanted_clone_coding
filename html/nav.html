@@ -41,9 +41,8 @@
             </div>
         </div> 
     </nav>
-    <div class="modal_signup_container">
+    <div id="modal" class="modal_signup_container">
         <div class="modal_signup_wrapper">
-            
             <div class="modal_signup_title_container">
                 <div class="modal_signup_title_img">
                     <div style="padding:10px;"></div>
@@ -51,20 +50,38 @@
                     <div class="close" id="closeBtn" onclick="closeModal()"><svg width="20px" height="20px" class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 24 24"><path d="M17.97 19.03a.749.749 0 1 0 1.06-1.06l-6.5-6.5a.749.749 0 0 0-1.06 0l-6.5 6.5a.749.749 0 1 0 1.06 1.06L12 13.06l5.97 5.97zM12 10.94 6.03 4.97a.749.749 0 1 0-1.06 1.06l6.5 6.5a.749.749 0 0 0 1.06 0l6.5-6.5a.749.749 0 1 0-1.06-1.06L12 10.94z"></path></svg></div>
                 </div>
             </div>
+            
             <div class="modal_signup_input_container">
-                <label class="modal_signup_input_email">이름</label>
+                <label class="modal_signup_input_name">이름</label>
                 <input class="modal_signup_input" placeholder="이름을 입력해주세요.">
             </div>
             <div class="modal_signup_input_container">
-                <label class="modal_signup_input_email">휴대폰 번호</label>
-                <select class="modal_signup_input" placeholder="(예시) 01012345678">
                 <div class="modal_signup_input_phone">
-                    <input placeholder="(예시) 01012345678">
-                    <div>인증번호 받기</div>
+                    <label class="modal_signup_input_phonelabel">휴대폰 번호</label>
+                    <select class="modal_signup_select" placeholder="(예시) 01012345678"></select>
+                    <div class="modal_signup_input_phone_container">
+                        <input class="modal_signup_input_ex" placeholder="(예시) 01012345678">
+                        <div class="modal_signup_select_button">인증번호 받기</div>
+                    </div>
+                    <div class="modal_signup_select_button_container">인증번호를 입력해주세요.</div>
                 </div>
-                <input class="modal_signup_input" placeholder="(예시) 01012345678">
+            </div>
+            <div class="modal_signup_input_container">
+                <div class="modal_signup_pw_container">
+                    <label class="modal_signup_input_pw">비밀번호</label>
+                    <input class="modal_signup_input_pw_ex" placeholder="비밀번호를 입력해 주세요.">
+                </div>
+                <div class="modal_signup_pw_container">
+                    <label class="modal_signup_input_pw">비밀번호 확인</label>
+                    <input class="modal_signup_input_pw_ex" placeholder="비밀번호를 다시 한 번 입력해 주세요.">
+                </div>
+            </div>
+
+            <div class="modal_signup_input_container">
+                <div class="modal_signup_complete">회원가입하기</div>
             </div>
         </div>
     </div>
+
 </body>
 </html>

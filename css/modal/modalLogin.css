@@ -1,3 +1,7 @@
+main {
+    position: relative;
+}
+
 .modal_container {
     display: none;
     justify-content: center;

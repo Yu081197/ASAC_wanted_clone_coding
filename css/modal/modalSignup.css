@@ -1,5 +1,5 @@
 .modal_signup_container {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -18,7 +18,7 @@
     width: 500px;
     height: 800px;
     border: 1px solid rgba(0, 0, 0, .1);
-    gap: 50px;
+    gap: 25px;
     z-index: 5;
     position: absolute;
 }
@@ -49,14 +49,13 @@
     text-align: center;
 }
 
-
 .modal_signup_input_container {
     display: flex;
     flex-direction: column;
     width: 460px;
 }
 
-.modal_signup_input_email {
+.modal_signup_input_name {
     margin: 17px 0px 7px;
     color: #888;
     font-size: 14px;
@@ -73,6 +72,60 @@
     color: #333;
 }
 
+.modal_signup_input_phonelabel {
+    margin: 17px 0px 7px;
+    color: #888;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.modal_signup_input_phone {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal_signup_select {
+    height: 50px;
+    border: 1px solid #e1e2e3;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+
+.modal_signup_select_button {
+    color: #333;
+    background-color: #f2f4f7;
+    height: 50px;
+    width: 150px;
+    border-radius: 4px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    font-weight: 600;
+}
+
+.modal_signup_input_phone_container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+    flex-direction: row;
+}
+
+.modal_signup_input_ex {
+    height: 50px;
+    border: 1px solid #e1e2e3;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    width: 300px;
+}
+
 .modal_signup_input_button {
     color: #333;
     background-color: #f2f4f7;
@@ -86,6 +139,58 @@
     justify-content: center;
     margin-top: 30px;
     width: 100%;
+}
+
+.modal_signup_select_button_container {
+    color: #333;
+    background-color: #f2f4f7;
+    height: 50px;
+    min-height: 50px;
+    border-radius: 3px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    width: 100%;
+    opacity: 0.5;
+}
+
+.modal_signup_pw_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal_signup_input_pw {
+    margin: 17px 0px 7px;
+    color: #888;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.modal_signup_input_pw_ex {
+    height: 50px;
+    border: 1px solid #e1e2e3;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    width: 100%;
+}
+
+.modal_signup_complete {
+    color: #333;
+    background-color: #f2f4f7;
+    height: 50px;
+    min-height: 50px;
+    border-radius: 25px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    opacity: 0.5;
 }
 
 .close:hover {
