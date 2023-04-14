@@ -68,8 +68,8 @@
                 </div>
                 <div class="modal_input_container">
                     <label class="modal_input_email">이메일</label>
-                    <input class="modal_input" type="email" placeholder="이메일을 입력해주세요.">
-                    <div id="nextBtn "class="modal_input_button" onclick="nextBtn()">이메일로 계속하기</div>
+                    <input id="email" class="modal_input" type="email" placeholder="이메일을 입력해주세요." >
+                    <div id="nextBtn" class="modal_input_button">이메일로 계속하기</div>
                     <div class="modal_input_or">또는</div>
                 </div>
                 <div class="modal_input_emozi">
@@ -668,20 +668,27 @@
         const modal = document.getElementById("modal")
         const btnModal = document.getElementById("loginBtn")
         const btnClose = document.getElementById("closeBtn")
-        const btnNext = document.getElementById("nextBtn")
-        let loginBtn = (e) => {
+        const btnNext = document.getElementById("nextBtn") 
+
+        let loginBtn = () => {
             modal.style.display = "flex";
         }
 
-        let closeModal = (e) => {
+        let closeModal = () => {
             modal.style.display = "none";
             modal_signup.style.display = "none";
         }
 
-        let nextBtn = (e) => {
-            modal.style.display = "none";
-            modal_signup.style.display = "flex";
-        }
+
+        btnNext.addEventListener("click",  function() {
+            if(document.getElementById("email").value == "") {
+                console.log("==========")
+                return
+            } else {
+                modal.style.display = "none";
+                modal_signup.style.display = "flex";
+            }
+        })
         
     </script>
 </body>
